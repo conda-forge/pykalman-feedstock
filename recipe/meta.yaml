@@ -1,22 +1,25 @@
+{% set name = "pykalman" %}
 {% set version = "0.9.5" %}
+{% set bundle = "tar.gz" %}
 
 package:
-  name: pykalman
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: pykalman-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/p/pykalman/pykalman-{{ version }}.tar.gz
+  fn: {{ name }}-{{ version }}.{{ bundle }}
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
   sha256: 816af47720d924a4c6016fa74b9e2c8c21165a08d91693c322a1741e8e07fb38
 
 build:
-  number: 0
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  number: 1
+  noarch: python
+  script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
   build:
     - python
-    - setuptools
+    - pip
 
   run:
     - python
@@ -32,9 +35,13 @@ test:
     - pykalman.tests
 
 about:
-  home: http://pykalman.github.io
+  home: https://pykalman.github.io
   license: BSD 3-Clause
+  license_file: {{ RECIPE_DIR }}/COPYING
+  license_family: BSD
   summary: 'An implementation of the Kalman Filter, Kalman Smoother, and EM algorithm in Python'
+  dev_url: https://github.com/pykalman/pykalman
+  doc_url: https://pykalman.github.io
 
 extra:
   recipe-maintainers:
