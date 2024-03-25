@@ -1,5 +1,5 @@
 {% set name = "pykalman" %}
-{% set version = "0.9.5" %}
+{% set version = "0.9.7" %}
 {% set bundle = "tar.gz" %}
 
 package:
@@ -9,15 +9,15 @@ package:
 source:
   fn: {{ name }}-{{ version }}.{{ bundle }}
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
-  sha256: 816af47720d924a4c6016fa74b9e2c8c21165a08d91693c322a1741e8e07fb38
+  sha256: 135779200393c6b370221990f7316740472f541346e9211d11630e2c2d8fb8a0
 
 build:
-  number: 1
+  number: 0
   noarch: python
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
-  build:
+  host:
     - python
     - pip
 
