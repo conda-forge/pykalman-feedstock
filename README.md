@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pykalman-feedst
 
 Home: https://pykalman.github.io
 
-Package license: BSD 3-Clause
+Package license: BSD-3-Clause
 
 Summary: An implementation of the Kalman Filter, Kalman Smoother, and EM algorithm in Python
 
@@ -147,5 +147,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@ocefpaf](https://github.com/ocefpaf/)
 * [@pmlandwehr](https://github.com/pmlandwehr/)
 
