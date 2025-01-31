@@ -37,7 +37,7 @@ test:
 about:
   home: https://pykalman.github.io
   license: BSD-3-Clause
-  license_file: COPYING
+  license_file: LICENSE
   license_family: BSD
   summary: 'An implementation of the Kalman Filter, Kalman Smoother, and EM algorithm in Python'
   dev_url: https://github.com/pykalman/pykalman
