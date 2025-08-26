@@ -17,13 +17,13 @@ build:
 requirements:
   host:
     - python {{ python_min }}
-    - setuptools
+    - setuptools >61
     - pip
   run:
-    - packaging
-    - scikit-base <0.13.0
     - python >={{ python_min }}
     - numpy <3
+    - packaging
+    - scikit-base <0.13.0
     - scipy <2.0.0
 
 test:
@@ -38,7 +38,7 @@ test:
 about:
   home: https://pykalman.github.io
   license: BSD-3-Clause
-  license_file: COPYING
+  license_file: LICENSE
   license_family: BSD
   summary: 'An implementation of the Kalman Filter, Kalman Smoother, and EM algorithm in Python'
   dev_url: https://github.com/pykalman/pykalman
