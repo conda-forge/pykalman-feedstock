@@ -1,5 +1,5 @@
 {% set name = "pykalman" %}
-{% set version = "0.10.2" %}
+{% set version = "0.11.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pykalman-{{ version }}.tar.gz
-  sha256: 0046d9ca7900207ca6f73b421476ba5f2e0f3e6ca1d472ff2223fd4dbd3ffdbe
+  sha256: 508b412fc37339d633ee11215c4366a4befe3c027ba950dcd2de3c665bdf65ed
 
 build:
   noarch: python
@@ -23,7 +23,7 @@ requirements:
     - python >={{ python_min }}
     - numpy <3
     - packaging
-    - scikit-base <0.13.0
+    - scikit-base <0.14.0
     - scipy <2.0.0
 
 test:
