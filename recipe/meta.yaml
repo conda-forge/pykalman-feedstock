@@ -1,5 +1,5 @@
 {% set name = "pykalman" %}
-{% set version = "0.11.1" %}
+{% set version = "0.11.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pykalman-{{ version }}.tar.gz
-  sha256: 3cf7cd8f5c96d51e3285aaef12eb2818fe872e092c3d649f1e4033c42639b806
+  sha256: 70c22bb074376f7aa1304c4c2f4c61feb22bafd4ab992d340da9340b5a028674
 
 build:
   noarch: python
